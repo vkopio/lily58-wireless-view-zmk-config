@@ -44,8 +44,8 @@
             bindings = <
 &trans     &trans    &trans  &trans    &trans      &trans                          &trans     &trans                &trans                 &trans         &trans            &trans
 &trans     &trans    &trans  &trans    &trans      &trans                          &trans     &kp LBKT              &kp RBKT               &kp LESS_THAN  &kp GREATER_THAN  &trans
-&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PRCNT                       &kp CARET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS       &kp MINUS         &kp TILDE
-&trans     &trans    &trans  &trans    &trans      &trans     &trans    &kp RA(W)  &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp EQUAL      &kp BACKSLASH     &kp PIPE
+&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PRCNT                       &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS       &kp MINUS         &kp TILDE
+&trans     &trans    &trans  &trans    &trans      &trans     &trans    &kp RA(W)  &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp STAR       &kp BACKSLASH     &kp PIPE
                              &trans    &trans      &trans     &trans    &trans     &kp HOME   &kp END               &trans
             >;
 
@@ -62,11 +62,11 @@
 
             label = "Raise";
             bindings = <
-&trans     &trans  &trans  &trans  &trans  &trans                    &trans          &trans          &trans        &trans     &trans  &trans
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6          &kp N7          &kp N8        &kp N9     &kp N0  &trans
-&trans     &trans  &trans  &trans  &trans  &trans                    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
-&trans     &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &trans  &trans
-                           &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans
+&trans     &trans        &trans        &trans        &trans        &trans                    &trans          &trans          &trans        &trans     &trans  &trans
+&kp GRAVE  &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans                    &trans          &trans          &trans        &trans     &trans  &trans
+&trans     &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans                    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
+&trans     &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans    &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &trans  &trans
+                                       &trans        &trans        &trans  &trans    &trans  &trans          &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
