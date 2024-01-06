@@ -22,11 +22,11 @@
 
             label = "Base";
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                  &kp N6         &kp N7    &kp N8         &kp N9   &kp N0    &kp GRAVE
-&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                                   &kp Y          &kp U     &kp I          &kp O    &kp P     &kp MINUS
-&kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                                   &kp H          &kp J     &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B       &kp RA(Q)      &kp RA(P)    &kp N          &kp M     &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                           &kp LALT  &kp LGUI  &kp ESCAPE  &lt 1 SPACE    &lt 2 ENTER  &kp BACKSPACE  &kp HOME  &kp RIGHT_ALT
+&kp GRAVE  &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                 &kp N6         &kp N7   &kp N8         &kp N9   &kp N0    &kp GRAVE
+&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                                  &kp Y          &kp U    &kp I          &kp O    &kp P     &kp MINUS
+&kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                                  &kp H          &kp J    &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B      &kp RA(Q)      &kp RA(P)    &kp N          &kp M    &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
+                           &kp LALT  &kp LGUI  &lt 3 ESC  &lt 1 SPACE    &lt 2 ENTER  &kp BACKSPACE  &kp DEL  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -42,11 +42,11 @@
 
             label = "Lower";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans      &trans     &trans           &trans    &trans    &trans
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7      &kp F8     &kp F9           &kp F10   &kp F11   &kp F12
-&kp GRAVE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                       &kp CARET   &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
-&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans      &kp MINUS  &kp KP_PLUS      &kp LBRC  &kp RBRC  &kp PIPE
-                                        &trans        &trans        &trans        &trans    &trans  &kp DELETE  &kp END    &trans
+&trans     &trans    &trans  &trans    &trans      &trans                          &trans     &trans                &trans                 &trans         &trans            &trans
+&trans     &trans    &trans  &trans    &trans      &trans                          &trans     &kp LBKT              &kp RBKT               &kp LESS_THAN  &kp GREATER_THAN  &trans
+&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PRCNT                       &kp CARET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS       &kp MINUS         &kp TILDE
+&trans     &trans    &trans  &trans    &trans      &trans     &trans    &kp RA(W)  &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp EQUAL      &kp BACKSLASH     &kp PIPE
+                             &trans    &trans      &trans     &trans    &trans     &kp HOME   &kp END               &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -62,14 +62,26 @@
 
             label = "Raise";
             bindings = <
-&trans     &trans  &trans  &trans   &trans   &trans                     &trans          &trans          &trans        &trans     &trans    &trans
-&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                     &kp N6          &kp N7          &kp N8        &kp N9     &kp N0    &trans
-&kp F1     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans    &trans
-&kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_PLUS     &kp MINUS       &kp EQUAL     &kp LBKT   &kp RBKT  &kp BSLH
-                           &trans   &trans   &trans   &trans    &trans  &trans          &trans          &trans
+&trans     &trans  &trans  &trans  &trans  &trans                    &trans          &trans          &trans        &trans     &trans  &trans
+&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6          &kp N7          &kp N8        &kp N9     &kp N0  &trans
+&trans     &trans  &trans  &trans  &trans  &trans                    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
+&trans     &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &trans  &trans
+                           &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        control_layer {
+            bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4             &kp F5           &kp F6                                &kp F7  &kp F8                &kp F9                &kp F10  &kp F11  &kp F12
+&none   &none   &none   &none              &none            &none                                 &none   &none                 &none                 &none    &none    &none
+&none   &none   &none   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE                            &none   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none    &none    &none
+&none   &none   &none   &none              &none            &none       &bt BT_NXT    &bt BT_PRV  &none   &none                 &none                 &none    &none    &bootloader
+                        &none              &none            &trans      &trans        &trans      &none   &none                 &none
+            >;
+
+            label = "Controls";
         };
     };
 };
