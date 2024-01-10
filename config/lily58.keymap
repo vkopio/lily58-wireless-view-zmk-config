@@ -43,6 +43,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        slash: slash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASH";
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -60,11 +69,11 @@
         default_layer {
             label = "Base";
             bindings = <
-&kp GRAVE  &kp N1          &kp N2          &kp N3              &kp N4            &kp N5                                  &kp N6         &kp N7   &kp N8         &kp N9   &kp N0                  &kp GRAVE
-&kp TAB    &kp Q           &kp W           &kp E               &kp R             &kp T                                   &kp Y          &kp U    &kp I          &kp O    &kp P                   &questex
-&kp LCTRL  &mt LEFT_ALT A  &mt LEFT_GUI S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G                                   &kp H          &kt J    &kp K          &kp L    &mt LEFT_ALT SEMICOLON  &kp EXCLAMATION
-&kp LSHFT  &kp Z           &kp X           &kp C               &kp V             &kp B       &kp RA(Q)      &kp RA(P)    &kp N          &kp M    &comma         &period  &kp MINUS               &kp RSHFT
-                                           &kp LALT            &kp LEFT_GUI      &kp ESCAPE  &lt 1 SPACE    &lt 2 ENTER  &kp BACKSPACE  &kp DEL  &kp RIGHT_ALT
+&kp ESCAPE  &kp GRAVE  &kp SQT  &kp DOUBLE_QUOTES  &kp TILDE     &kp AMPERSAND                              &kp PIPE       &slash      &kp STAR       &kp PLUS  &kp EQUAL  &kp CARET
+&kp TAB     &kp Q      &kp W    &kp E              &kp R         &kp T                                      &kp Y          &kp U       &kp I          &kp O     &kp P      &questex
+&kp LCTRL   &kp A      &kp S    &kp D              &kp F         &kp G                                      &kp H          &kt J       &kp K          &kp L     &kp RA(P)  &kp RA(Q)
+&kp LSHFT   &kp Z      &kp X    &kp C              &kp V         &kp B          &kp AT         &kp POUND    &kp N          &kp M       &comma         &period   &kp MINUS  &kp RSHFT
+                                &kp LALT           &kp LEFT_GUI  &kp ESCAPE     &lt 1 SPACE    &lt 2 ENTER  &kp BACKSPACE  &kp DELETE  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -73,11 +82,11 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&trans  &trans     &trans            &trans             &trans      &trans                              &trans     &trans                &trans                 &trans         &trans            &trans
-&trans  &kp GRAVE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp TILDE   &kp BACKSLASH                       &kp PIPE   &kp LBKT              &kp RBKT               &kp LESS_THAN  &kp GREATER_THAN  &trans
-&trans  &kp EXCL   &kp AT            &kp HASH           &kp DOLLAR  &kp PRCNT                           &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS       &kp MINUS         &trans
-&trans  &trans     &trans            &trans             &trans      &trans         &trans    &kp RA(W)  &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp STAR       &kp SLASH         &trans
-                                     &trans             &trans      &trans         &trans    &trans     &kp DEL    &trans                &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans                &trans                 &trans         &trans            &trans
+&trans  &none   &kp N7  &kp N8  &kp N9  &kp PERCENT                         &none   &kp LBKT              &kp RBKT               &kp LESS_THAN  &kp GREATER_THAN  &trans
+&trans  &kp N0  &kp N4  &kp N5  &kp N6  &kp DOLLAR                          &none   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none          &none             &kp RA(W)
+&trans  &none   &kp N1  &kp N2  &kp N3  &kp RA(NUMBER_5)  &trans    &trans  &none   &kp LEFT_BRACE        &kp RIGHT_BRACE        &none          &none             &trans
+                        &trans  &trans  &trans            &trans    &trans  &trans  &trans                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -86,11 +95,11 @@
         raise_layer {
             label = "Raise";
             bindings = <
-&trans  &trans                 &trans                 &trans                     &trans                   &trans                    &trans           &trans         &trans    &trans       &trans  &trans
-&trans  &trans                 &kp NUMBER_7           &kp NUMBER_8               &kp NUMBER_9             &trans                    &kp PAUSE_BREAK  &kp PAGE_DOWN  &kp UP    &kp PAGE_UP  &trans  &trans
-&trans  &mt LEFT_ALT NUMBER_0  &mt LEFT_GUI NUMBER_4  &mt LEFT_CONTROL NUMBER_5  &mt LEFT_SHIFT NUMBER_6  &trans                    &kp PRINTSCREEN  &kp LEFT       &kp DOWN  &kp RIGHT    &trans  &trans
-&trans  &trans                 &kp NUMBER_1           &kp NUMBER_2               &kp NUMBER_3             &trans  &trans    &trans  &kp INSERT       &kp HOME       &trans    &kp END      &trans  &trans
-                                                      &trans                     &trans                   &trans  &trans    &trans  &trans           &trans         &trans
+&trans  &trans                 &trans                 &trans                     &trans                   &trans                    &trans         &trans              &trans    &trans               &trans           &trans
+&trans  &trans                 &kp NUMBER_7           &kp NUMBER_8               &kp NUMBER_9             &trans                    &kp PAGE_UP    &kp LC(LEFT_ARROW)  &kp UP    &kp LC(RIGHT_ARROW)  &kp PAUSE_BREAK  &trans
+&trans  &mt LEFT_ALT NUMBER_0  &mt LEFT_GUI NUMBER_4  &mt LEFT_CONTROL NUMBER_5  &mt LEFT_SHIFT NUMBER_6  &trans                    &kp PAGE_DOWN  &kp LEFT            &kp DOWN  &kp RIGHT            &kp PRINTSCREEN  &trans
+&trans  &trans                 &kp NUMBER_1           &kp NUMBER_2               &kp NUMBER_3             &trans  &trans    &trans  &kp INSERT     &kp HOME            &trans    &kp END              &trans           &trans
+                                                      &trans                     &trans                   &trans  &trans    &trans  &trans         &trans              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
