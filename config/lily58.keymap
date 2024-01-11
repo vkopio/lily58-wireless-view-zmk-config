@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 &mt {
@@ -93,7 +92,7 @@
             bindings = <
 &kp ESCAPE  &kp GRAVE  &kp SQT  &kp DOUBLE_QUOTES  &kp TILDE   &kp AMPERSAND                              &kp PIPE       &slash      &kp STAR       &kp PLUS  &kp EQUAL  &kp CARET
 &kp TAB     &kp Q      &kp W    &kp E              &kp R       &kp T                                      &kp Y          &kp U       &kp I          &kp O     &kp P      &questex
-&kp LCTRL   &kp A      &kp S    &kp D              &kp F       &kp G                                      &kp H          &kt J       &kp K          &kp L     &kp RA(P)  &kp RA(Q)
+&kp LCTRL   &kp A      &kp S    &kp D              &kp F       &kp G                                      &kp H          &kp J       &kp K          &kp L     &kp RA(P)  &kp RA(Q)
 &kp LSHFT   &kp Z      &kp X    &kp C              &kp V       &kp B          &kp AT         &kp POUND    &kp N          &kp M       &comma         &period   &kp MINUS  &kp RSHFT
                                 &alt_dance         &gui_dance  &ctrl_dance    &lt 1 SPACE    &lt 2 ENTER  &kp BACKSPACE  &kp DELETE  &kp RIGHT_ALT
             >;
@@ -117,11 +116,11 @@
         raise_layer {
             label = "Raise";
             bindings = <
-&trans  &trans                 &trans                 &trans                     &trans                   &trans                    &trans         &trans              &trans    &trans               &trans           &trans
-&trans  &trans                 &kp NUMBER_7           &kp NUMBER_8               &kp NUMBER_9             &trans                    &kp PAGE_UP    &kp LC(LEFT_ARROW)  &kp UP    &kp LC(RIGHT_ARROW)  &kp PAUSE_BREAK  &trans
-&trans  &mt LEFT_ALT NUMBER_0  &mt LEFT_GUI NUMBER_4  &mt LEFT_CONTROL NUMBER_5  &mt LEFT_SHIFT NUMBER_6  &trans                    &kp PAGE_DOWN  &kp LEFT            &kp DOWN  &kp RIGHT            &kp PRINTSCREEN  &trans
-&trans  &trans                 &kp NUMBER_1           &kp NUMBER_2               &kp NUMBER_3             &trans  &trans    &trans  &kp INSERT     &kp HOME            &trans    &kp END              &trans           &trans
-                                                      &trans                     &trans                   &trans  &trans    &trans  &trans         &trans              &trans
+&trans  &trans  &kp F10  &kp F11  &kp F12  &trans                    &trans         &trans              &trans    &trans               &trans           &trans
+&trans  &trans  &kp F7   &kp F8   &kp F9   &trans                    &kp PAGE_UP    &kp LC(LEFT_ARROW)  &kp UP    &kp LC(RIGHT_ARROW)  &kp PAUSE_BREAK  &trans
+&trans  &none   &kp F4   &kp F5   &kp F6   &trans                    &kp PAGE_DOWN  &kp LEFT            &kp DOWN  &kp RIGHT            &kp PRINTSCREEN  &trans
+&trans  &trans  &kp F1   &kp F2   &kp F3   &trans  &trans    &trans  &kp INSERT     &kp HOME            &trans    &kp END              &trans           &trans
+                         &trans   &trans   &trans  &trans    &trans  &trans         &trans              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -129,10 +128,10 @@
 
         control_layer {
             bindings = <
-&kp F1        &kp F2                &kp F3                &kp F4             &kp F5           &kp F6                                &kp F7  &kp F8   &kp F9  &kp F10  &kp F11  &kp F12
-&out OUT_TOG  &none                 &none                 &none              &none            &none                                 &none   &none    &none   &none    &none    &none
-&bt BT_CLR    &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE                            &none   &vim_wq  &none   &none    &none    &none
-&bootloader   &none                 &none                 &none              &none            &none       &bt BT_PRV    &bt BT_NXT  &none   &none    &none   &none    &none    &bootloader
+&trans        &trans                &trans                &trans             &trans           &trans                                &trans  &trans   &trans  &trans  &trans  &trans
+&out OUT_TOG  &none                 &none                 &none              &none            &none                                 &none   &none    &none   &none   &none   &none
+&bt BT_CLR    &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE                            &none   &vim_wq  &none   &none   &none   &none
+&bootloader   &none                 &none                 &none              &none            &none       &bt BT_PRV    &bt BT_NXT  &none   &none    &none   &none   &none   &bootloader
                                                           &none              &none            &trans      &trans        &trans      &none   &none    &none
             >;
 
