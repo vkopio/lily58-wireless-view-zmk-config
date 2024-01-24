@@ -58,6 +58,8 @@
             label = "CTRL_DANCE";
             #binding-cells = <0>;
             bindings = <&kp LCTRL>, <&kp LS(LCTRL)>, <&kp LS(LA(LCTRL))>;
+
+            tapping-term-ms = <300>;
         };
 
         gui_dance: gui_dance {
@@ -65,6 +67,8 @@
             label = "GUI_DANCE";
             #binding-cells = <0>;
             bindings = <&kp LEFT_GUI>, <&kp LS(LEFT_GUI)>;
+
+            tapping-term-ms = <300>;
         };
 
         alt_dance: alt_dance {
@@ -72,6 +76,8 @@
             label = "ALT_DANCE";
             #binding-cells = <0>;
             bindings = <&kp LEFT_ALT>, <&kp LC(LEFT_ALT)>;
+
+            tapping-term-ms = <300>;
         };
     };
 
