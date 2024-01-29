@@ -100,7 +100,7 @@
 &kp LS(TAB)     &kp Q      &kp W    &kp E              &kp R       &kp T                                                 &kp Y          &kp U       &kp I          &kp O     &kp P      &questex
 &kp TAB         &kp A      &kp S    &kp D              &kp F       &kp G                                                 &kp H          &kp J       &kp K          &kp L     &kp RA(P)  &kp RA(Q)
 &kp LEFT_SHIFT  &kp Z      &kp X    &kp C              &kp V       &kp B          &kp LA(LC(LEFT))    &kp LA(LC(RIGHT))  &kp N          &kp M       &comma         &period   &kp MINUS  &kp LEFT_SHIFT
-                                    &alt_dance         &gui_dance  &ctrl_dance    &lt 1 SPACE         &lt 2 ENTER        &sk BACKSPACE  &kp DELETE  &kp RIGHT_ALT
+                                    &alt_dance         &gui_dance  &ctrl_dance    &lt 1 SPACE         &lt 2 ENTER        &kp BACKSPACE  &kp DELETE  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
