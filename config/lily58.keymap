@@ -96,11 +96,11 @@
         default_layer {
             label = "Base";
             bindings = <
-&kp ESCAPE     &kp GRAVE  &kp SQT  &kp DOUBLE_QUOTES  &kp TILDE   &kp AMPERSAND                                         &kp PIPE        &slash      &kp EQUAL      &kp PLUS  &kp STAR   &kp CARET
-&kp LS(TAB)    &kp Q      &kp W    &kp E              &kp R       &kp T                                                 &kp Y           &kp U       &kp I          &kp O     &kp P      &questex
-&kp TAB        &kp A      &kp S    &kp D              &kp F       &kp G                                                 &kp H           &kp J       &kp K          &kp L     &kp RA(P)  &kp RA(Q)
-&kp BACKSPACE  &kp Z      &kp X    &kp C              &kp V       &kp B          &kp LA(LC(LEFT))    &kp LA(LC(RIGHT))  &kp N           &kp M       &comma         &period   &kp MINUS  &kp DELETE
-                                   &alt_dance         &gui_dance  &ctrl_dance    &lt 1 SPACE         &lt 2 ENTER        &sk LEFT_SHIFT  &kp ESCAPE  &kp RIGHT_ALT
+&kp ESCAPE          &kp GRAVE  &kp SQT  &kp DOUBLE_QUOTES  &kp TILDE   &kp AMPERSAND                                         &kp PIPE        &slash      &kp EQUAL      &kp PLUS  &kp STAR   &kp CARET
+&kp LS(TAB)         &kp Q      &kp W    &kp E              &kp R       &kp T                                                 &kp Y           &kp U       &kp I          &kp O     &kp P      &questex
+&mt LEFT_SHIFT TAB  &kp A      &kp S    &kp D              &kp F       &kp G                                                 &kp H           &kp J       &kp K          &kp L     &kp RA(P)  &kp RA(Q)
+&kp BACKSPACE       &kp Z      &kp X    &kp C              &kp V       &kp B          &kp LA(LC(LEFT))    &kp LA(LC(RIGHT))  &kp N           &kp M       &comma         &period   &kp MINUS  &kp DELETE
+                                        &alt_dance         &gui_dance  &ctrl_dance    &lt 1 SPACE         &lt 2 ENTER        &sk LEFT_SHIFT  &kp ESCAPE  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
