@@ -109,11 +109,11 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&trans  &none   &none   &none   &none   &none                                             &none      &none                 &none                  &none          &none             &none
-&trans  &none   &kp N7  &kp N8  &kp N9  &kp PERCENT                                       &kp POUND  &kp LBKT              &kp RBKT               &kp LESS_THAN  &kp GREATER_THAN  &none
-&trans  &kp N0  &kp N4  &kp N5  &kp N6  &kp DOLLAR                                        &kp AT     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none          &none             &kp RA(W)
-&trans  &none   &kp N1  &kp N2  &kp N3  &kp RA(NUMBER_5)  &kp LS(LA(TAB))    &kp LA(TAB)  &none      &kp LEFT_BRACE        &kp RIGHT_BRACE        &none          &none             &trans
-                        &trans  &trans  &trans            &trans             &trans       &trans     &trans                &trans
+&trans  &none   &none   &none   &none   &none                                             &none          &none                  &none            &none              &none             &none
+&trans  &none   &kp N7  &kp N8  &kp N9  &kp PERCENT                                       &kp POUND      &none                  &none            &none              &none             &none
+&trans  &kp N0  &kp N4  &kp N5  &kp N6  &kp DOLLAR                                        &kp AT         &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp LEFT_BRACKET   &kp LESS_THAN     &kp RA(W)
+&trans  &none   &kp N1  &kp N2  &kp N3  &kp RA(NUMBER_5)  &kp LS(LA(TAB))    &kp LA(TAB)  &kp RA(LS(S))  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GREATER_THAN  &trans
+                        &trans  &trans  &trans            &trans             &trans       &trans         &trans                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -134,24 +134,14 @@
 
         control_layer {
             bindings = <
-&trans        &trans                &trans                &trans             &trans           &trans                                &trans   &trans            &trans        &trans             &trans  &trans
-&out OUT_TOG  &none                 &none                 &none              &none            &none                                 &none    &kp LS(LC(LEFT))  &kp LS(UP)    &kp LS(LC(RIGHT))  &none   &none
-&bt BT_CLR    &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE                            &vim_wq  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &none   &none
-&bootloader   &none                 &none                 &none              &none            &none       &bt BT_PRV    &bt BT_NXT  &none    &kp LS(HOME)      &none         &kp LS(END)        &none   &bootloader
-                                                          &none              &none            &trans      &trans        &trans      &none    &none             &none
+&trans        &trans  &trans  &trans                 &trans             &trans                            &trans   &trans            &trans        &trans             &trans  &trans
+&out OUT_TOG  &none   &none   &kp C_BRI_UP           &kp C_VOLUME_UP    &none                             &none    &kp LS(LC(LEFT))  &kp LS(UP)    &kp LS(LC(RIGHT))  &none   &none
+&bt BT_CLR    &none   &none   &kp C_BRI_DN           &kp C_VOLUME_DOWN  &none                             &vim_wq  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &none   &none
+&bootloader   &none   &none   &kp LS(LA(LC(LG(M))))  &kp K_MUTE         &none   &bt BT_PRV    &bt BT_NXT  &none    &kp LS(HOME)      &none         &kp LS(END)        &none   &bootloader
+                              &none                  &none              &trans  &trans        &trans      &none    &none             &none
             >;
 
             label = "Controls";
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-            >;
         };
     };
 
