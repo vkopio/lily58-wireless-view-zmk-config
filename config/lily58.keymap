@@ -116,6 +116,19 @@
             bindings = <&kp ESCAPE &kp COLON &kp W &kp Q &kp ENTER>;
             label = "VIM_WQ";
         };
+
+        obsidian_fleeting_note: obsidian_fleeting_note {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LG(S)>,
+                <&macro_wait_time 100>,
+                <&kp LC(N)>,
+                <&macro_wait_time 100>,
+                <&kp ENTER>;
+
+            label = "OBSIDIAN_FLEETING_NOTE";
+        };
     };
 
     keymap {
@@ -162,11 +175,11 @@
 
         control_layer {
             bindings = <
-&trans        &trans  &trans  &trans                 &trans             &trans                            &trans   &trans            &trans        &trans             &trans  &trans
-&out OUT_TOG  &none   &none   &kp C_BRI_UP           &kp C_VOLUME_UP    &none                             &none    &kp LS(LC(LEFT))  &kp LS(UP)    &kp LS(LC(RIGHT))  &none   &none
-&bt BT_CLR    &none   &none   &kp C_BRI_DN           &kp C_VOLUME_DOWN  &none                             &vim_wq  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &none   &none
-&bootloader   &none   &none   &kp LS(LA(LC(LG(M))))  &kp K_MUTE         &none   &bt BT_PRV    &bt BT_NXT  &none    &kp LS(HOME)      &none         &kp LS(END)        &none   &bootloader
-                              &trans                 &trans             &trans  &trans        &trans      &trans   &trans            &trans
+&trans        &trans  &trans                   &trans                 &trans             &trans                            &trans   &trans            &trans        &trans             &trans  &trans
+&out OUT_TOG  &none   &none                    &kp C_BRI_UP           &kp C_VOLUME_UP    &none                             &none    &kp LS(LC(LEFT))  &kp LS(UP)    &kp LS(LC(RIGHT))  &none   &none
+&bt BT_CLR    &none   &obsidian_fleeting_note  &kp C_BRI_DN           &kp C_VOLUME_DOWN  &none                             &vim_wq  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)      &none   &none
+&bootloader   &none   &none                    &kp LS(LA(LC(LG(M))))  &kp K_MUTE         &none   &bt BT_PRV    &bt BT_NXT  &none    &kp LS(HOME)      &none         &kp LS(END)        &none   &bootloader
+                                               &trans                 &trans             &trans  &trans        &trans      &trans   &trans            &trans
             >;
 
             label = "Controls";
