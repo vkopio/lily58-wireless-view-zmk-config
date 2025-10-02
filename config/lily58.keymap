@@ -153,8 +153,8 @@
 &trans  &none             &none                   &none                 &none               &none                                             &none          &none                              &none                          &none                        &none                    &none
 &trans  &none             &kp N7                  &kp N8                &kp N9              &kp PERCENT                                       &kp POUND      &none                              &none                          &none                        &none                    &none
 &trans  &mtl LEFT_ALT N0  &mtl LEFT_GUI NUMBER_4  &mtl LEFT_CONTROL N5  &mtl LEFT_SHIFT N6  &kp DOLLAR                                        &kp AT         &mtr RIGHT_SHIFT LEFT_PARENTHESIS  &mtr RIGHT_CONTROL LEFT_BRACE  &mtr RIGHT_GUI LEFT_BRACKET  &mtr LEFT_ALT LESS_THAN  &kp RA(W)
-&trans  &none             &kp N1                  &kp N2                &kp N3              &kp RA(NUMBER_5)  &kp LS(LA(TAB))    &kp LA(TAB)  &kp RA(LS(S))  &kp RIGHT_PARENTHESIS              &kp RIGHT_BRACE                &kp RIGHT_BRACKET            &kp GREATER_THAN         &trans
-                                                  &trans                &trans              &trans            &trans             &trans       &trans         &trans                             &trans
+&trans  &none             &kp N1                  &kp N2                &kp N3              &kp RA(NUMBER_5)  &kp LA(LC(Z))    &kp LA(LC(X))  &kp RA(LS(S))  &kp RIGHT_PARENTHESIS              &kp RIGHT_BRACE                &kp RIGHT_BRACKET            &kp GREATER_THAN         &trans
+                                                  &trans                &trans              &trans            &trans           &trans         &trans         &trans                             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
